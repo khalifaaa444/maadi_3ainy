@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرع المعــادي</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb); /* Gradient background */
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            color: #5e5e5e;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #ff6f61, #ffcccb);
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            position: relative;
+        }
+
+        .button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, #ffcccb, #ff6f61);
+        }
+
+        .button:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Tooltips */
+        .button::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.2s;
+            pointer-events: none;
+        }
+
+        .button:hover::after {
+            opacity: 1;
+        }
+
+        /* Icons for Buttons */
+        .button::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-size: cover;
+        }
+
+        .button:nth-child(1)::before {
+            background-image: url('https://img.icons8.com/ios-filled/50/ffffff/spreadsheet.png'); /* Spreadsheet icon */
+        }
+
+        .button:nth-child(2)::before {
+            background-image: url('https://img.icons8.com/ios-filled/50/ffffff/family.png'); /* Family icon */
+        }
+
+        .button:nth-child(3)::before {
+            background-image: url('https://img.icons8.com/ios-filled/50/ffffff/table.png'); /* Furniture icon */
+        }
+
+        .button:nth-child(4)::before {
+            background-image: url('https://img.icons8.com/ios-filled/50/ffffff/delete.png'); /* Delete icon */
+        }
+
+        .button:nth-child(5)::before {
+            background-image: url('https://img.icons8.com/ios-filled/50/ffffff/map.png'); /* Map icon */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>فرع المعــادي</h1>
+    
+    <div class="button-container">
+        <button class="button" onclick="location.href='https://docs.google.com/spreadsheets/d/17Jxis0DaUFiXY72OiQkZDcigcD1gjWAer63INey_D_E/edit?gid=1034478182#gid=1034478182'" data-tooltip="شيت الدايم"> شيت الدايم </button>
+        <button class="button" onclick="location.href='https://docs.google.com/spreadsheets/d/1rX42mZlnwhkvnC2zDRbny3J8jpajcTx2uyAravWPvms/edit?gid=771421251#gid=771421251'" data-tooltip="أسر القرية"> أسر القرية </button>
+        <button class="button" onclick="location.href='https://docs.google.com/spreadsheets/d/1fm0RxaV9TYvNzwqLteS-ly_bbbvOCPUfXSBSR6Ff5lI/edit?gid=1393693754#gid=1393693754'" data-tooltip="شيت التالف">شيت التالف  </button>
+        
+    </div>
+
+</body>
+</html>
